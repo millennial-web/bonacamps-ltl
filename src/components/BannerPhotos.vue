@@ -40,12 +40,13 @@ export default {
   data: function () {
       return {
           current_slide: 0,
+          auto_change_started:false,
           slide_data: [
             { 
               image: 'truck-back-view.jpeg', 
               title: 'BONACAMPS LTL', 
               subtitle: 'Less than truckload freight shipping services', 
-              description: 'Transportation of small freight between 150 - 15,000 pounds and a volume of less than a full truckload.',
+              description: 'Transportation of small freight between 100 to 1000 lbs.',
             },
             { 
               image: 'forklift-slide.jpg', 
@@ -77,18 +78,6 @@ export default {
     this.current_slide = 0;
   },
   methods: {
-    BannerAfterEnter: function(){
-      this.show_text_container = true;
-    },
-    TextContainerAfterEnter: function(){
-      this.show_title = true;
-    },
-    TitleAfterEnter: function(){
-      this.show_subtitle = true;
-    },
-    SubtitleAfterEnter: function(){
-      this.anims_done = true;
-    },
     nextSlide: function(){
       if(this.anims_done){
         this.anims_done = false;
@@ -107,7 +96,25 @@ export default {
           this.show_banner = true;
         }.bind(this), 400);
       }
-    }
+    },
+    BannerAfterEnter: function(){
+      this.show_text_container = true;
+    },
+    TextContainerAfterEnter: function(){
+      this.show_title = true;
+    },
+    TitleAfterEnter: function(){
+      this.show_subtitle = true;
+    },
+    SubtitleAfterEnter: function(){
+      this.anims_done = true;
+      // if(!this.auto_change_started){
+      //   setInterval(function(){ 
+      //       this.auto_change_started = true;
+      //       nextSlide();
+      //   }, 3000);
+      // }
+    },
 
   },
   components: {
