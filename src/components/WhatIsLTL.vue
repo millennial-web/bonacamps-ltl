@@ -16,17 +16,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
-  font-size:40px;
+  font-size:30px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+h3{
+  font-size:24px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size:26px;
+  }
+  h3{
+    font-size:18px;
+  }
+
 }
 </style>

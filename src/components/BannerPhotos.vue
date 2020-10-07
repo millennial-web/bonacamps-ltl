@@ -221,7 +221,6 @@ a.prev-button:hover{
   opacity: .5;
   transform: translateX(-400px);
 }
-
 .fade-enter-active, .fade-leave-active {
   transition: all .3s;
   opacity:.5;
@@ -230,4 +229,50 @@ a.prev-button:hover{
   opacity: 0;
   transform: translateX(100px);
 }
+
+@media only screen and (max-width: 1000px) {
+  .main_banner_wrapper{
+    height:200px;
+    min-height:200px;
+  }
+  .main-banner{
+    height:200px;
+    padding-top:20px;
+  }
+  .banner-text-container{
+    margin:0 auto;
+    padding:10px;
+    max-width:70%;
+    min-height:150px;
+  }
+  .title-text{
+    padding:10px auto;
+    font-size:22px;
+  }
+  .subtitle-text{
+    text-align:center;
+    margin:10px auto 0px auto;
+    color:aliceblue;
+    font-size:16px;
+  }
+  .description-text{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    margin:20px auto 0px auto;
+  }
+  a.next-button{
+    top:90px;
+    right:15px;
+    line-height:22px;
+    font-size:45px;
+  } 
+  a.prev-button{
+    top:90px;
+    left:15px;
+    line-height: 22px;
+    font-family: 'Anton', sans-serif;
+    font-size:45px;
+  } 
+}
+
 </style>
